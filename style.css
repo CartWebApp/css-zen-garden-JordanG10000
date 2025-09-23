@@ -1,1 +1,11 @@
 /* Empty file for template. Remember to edit only this file and not the HTML file */
+
+.page-wrapper {
+    border-block-color: #2344;
+}
+
+.intro h1, .intro h2 {
+    font-size: large;
+    text-align: center;
+
+}

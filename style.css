@@ -1,11 +1,24 @@
 /* Empty file for template. Remember to edit only this file and not the HTML file */
 
 .page-wrapper {
-    border-block-color: #2344;
+    margin: 0.5em;
 }
 
 .intro h1, .intro h2 {
-    font-size: large;
+    font-size: xx-large;
     text-align: center;
 
+}
+
+p {
+    font-size: large;
+}
+
+h3 {
+    font-size: x-large;
+
+}
+
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif ;
 }

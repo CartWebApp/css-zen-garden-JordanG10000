@@ -22,3 +22,47 @@ h3 {
 * {
     font-family: Georgia, 'Times New Roman', Times, serif ;
 }
+
+:root {
+    color-scheme: light dark;
+    color: blue;
+    background-color: lightgoldenrodyellow;
+}
+
+.preamble::before {
+    content: "";
+    display: block;
+    border: solid black 1px;
+}
+
+aside {
+ display: flex;
+ flex-direction: column;
+ align-items: flex-end;
+ justify-content: center;
+ transition: ease-in-out 10s;
+}
+
+aside:hover {
+    rotate: 180;
+    translate: 0% 500%;
+    transition: ease-in-out 1000s;
+    cursor: none;
+}
+
+aside li, aside ul {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+a {
+    color:cornflowerblue;
+    transition: ease-in 0.5s;
+    cursor: none;
+}
+
+a:hover {
+    color: black;
+    cursor: none;
+    font-size: 40%;
+}

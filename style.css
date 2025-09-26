@@ -1,5 +1,7 @@
 /* Empty file for template. Remember to edit only this file and not the HTML file */
 
+
+
 .page-wrapper {
     margin: 0.5em;
 }
@@ -7,16 +9,33 @@
 .intro h1, .intro h2 {
     font-size: xx-large;
     text-align: center;
+    background-image:url(https://www.google.com/imgres?q=image&imgurl=https%3A%2F%2Fwpengine.com%2Fwp-content%2Fuploads%2F2021%2F05%2Foptimize-images-1024x681.jpg&imgrefurl=https%3A%2F%2Fwpengine.com%2Fresources%2Foptimize-images-for-web%2F&docid=6C4UPmC-29lGdM&tbnid=BQvySkR3KQGbNM&vet=12ahUKEwjYnIihuPePAxUgJkQIHZzmJRQQM3oECCgQAA..i&w=1024&h=681&hcb=2&ved=2ahUKEwjYnIihuPePAxUgJkQIHZzmJRQQM3oECCgQAA)
 
 }
+
 
 p {
     font-size: large;
+    filter: blur(0.4px);
 }
 
+p:nth-child(2)
+{
+    filter: blur(0.5px);
+}
 h3 {
     font-size: x-large;
 
+}
+
+p:last-child {
+    font-size: 100%;
+    transition: ease-in-out 5s;
+}
+
+p:last-child:hover {
+    translate: -100% 0;
+    font-size: 90%;
 }
 
 * {
@@ -29,24 +48,18 @@ h3 {
     background-color: lightgoldenrodyellow;
 }
 
-.preamble::before {
-    content: "";
-    display: block;
-    border: solid black 1px;
-}
+
 
 aside {
  display: flex;
  flex-direction: column;
  align-items: flex-end;
  justify-content: center;
- transition: ease-in-out 10s;
+ transition: ease-in-out 2s;
 }
 
 aside:hover {
-    rotate: 180;
-    translate: 0% 500%;
-    transition: ease-in-out 1000s;
+    translate: 0% 100%;
     cursor: none;
 }
 
@@ -64,5 +77,12 @@ a {
 a:hover {
     color: black;
     cursor: none;
-    font-size: 40%;
+    font-size: 60%;
+}
+
+
+
+::selection {
+    color: limegreen;
+    background-color: lightgreen;
 }

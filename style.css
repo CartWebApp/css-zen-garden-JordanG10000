@@ -3,16 +3,44 @@
 
 
 .page-wrapper {
-    margin: 0.5em;
+    display: grid;
+    grid-template:
+        ". s s s ." 1fr
+        ". d d a ." 1fr
+        ". d d a ." 1fr
+        / 1fr 1fr 1fr;
+}
+
+section {
+    grid-area: s;
+    text-align: center;
+    border-style: solid;
+    border-color: darkblue;
+    background-color: lightblue;
+
+    border-radius: 10px;
+}
+
+#zen-supporting {
+    border-style: solid;
+    border-color: darkblue;
+    background-color: lightblue;
+    padding: 1em;  
+    border-radius: 10px;
 }
 
 .intro h1, .intro h2 {
     font-size: xx-large;
     text-align: center;
-    background-image:url(https://www.google.com/imgres?q=image&imgurl=https%3A%2F%2Fwpengine.com%2Fwp-content%2Fuploads%2F2021%2F05%2Foptimize-images-1024x681.jpg&imgrefurl=https%3A%2F%2Fwpengine.com%2Fresources%2Foptimize-images-for-web%2F&docid=6C4UPmC-29lGdM&tbnid=BQvySkR3KQGbNM&vet=12ahUKEwjYnIihuPePAxUgJkQIHZzmJRQQM3oECCgQAA..i&w=1024&h=681&hcb=2&ved=2ahUKEwjYnIihuPePAxUgJkQIHZzmJRQQM3oECCgQAA)
-
+    transition: ease-in-out 100s;
 }
 
+.intro h1:hover {
+    font-size: xx-large;
+    text-align: center;
+    rotate: 4000000deg;
+
+}
 
 p {
     font-size: large;
@@ -44,18 +72,22 @@ p:last-child:hover {
 
 :root {
     color-scheme: light dark;
-    color: blue;
+    color: rgb(0, 0, 0);
     background-color: lightgoldenrodyellow;
 }
 
-
+p:first-child:hover {
+    filter: blur(100px);
+    transition: ease-in-out 5s;
+}
 
 aside {
- display: flex;
- flex-direction: column;
- align-items: flex-end;
- justify-content: center;
- transition: ease-in-out 2s;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: darkblue;
+    background-color: lightblue;
+    transition: ease-in-out 2s;
+    justify-items: center;
 }
 
 aside:hover {
@@ -81,9 +113,14 @@ a:hover {
 }
 
 a:visited {
-    color: greenyellow;
+    color: darkblue;
+    font-size: 80%;
+    cursor: none;
 }
 
+p:focus {
+    outline-color: burlywood;
+}
 ::selection {
     color: limegreen;
     background-color: lightgreen;
@@ -96,21 +133,26 @@ h1::selection, h2::selection, h3::selection {
 
 p:only-child{
     font-size: 200%;
-    filter: blur(0.2px);
+    filter: blur(0.9px);
 }
 
 footer {
     text-align: center;
     font-size: small;
-    color: darkblue;
-    background-color: lightblue;
     border-radius: 5px;
     padding: 0.5em;
     margin-top: 1em;
+    grid-area: f;
     transition: ease-in-out 2s;
 }
 
 footer:hover {
-    rotate: 40deg;
-    translate: -100% 0%;
+    rotate: 400deg;
+    translate: -100% -1000%;
+}
+
+a:last-of-type:hover {
+    transition: ease-in-out 1000s;
+    rotate: 4000000deg;
+    font-size: 1000%;
 }

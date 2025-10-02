@@ -5,10 +5,10 @@
 .page-wrapper {
     display: grid;
     grid-template:
-        ". s s s ." 1fr
-        ". d d a ." 1fr
-        ". d d a ." 1fr
-        / 1fr 1fr 1fr;
+        "  s s s a " minmax(max-content, 100px)
+        "  d d d . " 1fr
+        "  d d d . " 1fr
+        / 1fr 1fr 1fr 1fr;
 }
 
 section {
@@ -22,6 +22,7 @@ section {
 }
 
 #zen-supporting {
+    grid-area: d;
     border-style: solid;
     border-color: darkblue;
     background-color: lightblue;
@@ -39,17 +40,34 @@ section {
     font-size: xx-large;
     text-align: center;
     rotate: 4000000deg;
+    translate: 230% -253%;
 
 }
 
+.preamble#zen-preamble::after {
+    content: " (Hover over and highlight text!)";
+    font-size: small;
+    color: darkblue;
+}
+
+
 p {
     font-size: large;
-    filter: blur(0.4px);
+    filter: blur(0.5px);
+}
+
+p:first-of-type {
+    font-size: 100%;
+    transition: ease-in-out 5s;
+}
+
+p:first-of-type:hover {
+    translate: 300% 0;
 }
 
 p:nth-child(2)
 {
-    filter: blur(0.5px);
+    filter: blur(0.6px);
 }
 h3 {
     font-size: x-large;
@@ -76,12 +94,15 @@ p:last-child:hover {
     background-color: lightgoldenrodyellow;
 }
 
+
+
 p:first-child:hover {
     filter: blur(100px);
     transition: ease-in-out 5s;
 }
 
 aside {
+    grid-area: a;
     border-style: solid;
     border-radius: 10px;
     border-color: darkblue;
@@ -131,6 +152,15 @@ h1::selection, h2::selection, h3::selection {
     background-color: orange;
 }
 
+p::first-letter {
+font-size: 105%;
+filter: none;
+}
+p::first-line {
+    font-size: 99%;
+    filter: none;
+}
+
 p:only-child{
     font-size: 200%;
     filter: blur(0.9px);
@@ -152,7 +182,13 @@ footer:hover {
 }
 
 a:last-of-type:hover {
-    transition: ease-in-out 1000s;
-    rotate: 4000000deg;
-    font-size: 1000%;
+    transition: ease-in-out 100s;
+    rotate: 4000deg;
+}
+
+.extra1 {
+    background-image: url(track.png);
+    width: 210px;
+    height: 210px;
+    position: absolute 10px 10px -100%;
 }

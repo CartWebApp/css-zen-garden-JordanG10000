@@ -36,10 +36,10 @@ section {
     transition: ease-in-out 100s;
 }
 
-.intro h1:hover {
+.intro h1:hover, .intro h2:hover {
     font-size: xx-large;
     text-align: center;
-    rotate: 4000000deg;
+    rotate: 400000deg;
     translate: 230% -253%;
 
 }
@@ -92,6 +92,7 @@ p:last-child:hover {
     color-scheme: light dark;
     color: rgb(0, 0, 0);
     background-color: lightgoldenrodyellow;
+    background-image: url(sand.jpg);
 }
 
 
@@ -136,6 +137,12 @@ a:hover {
 a:visited {
     color: darkblue;
     font-size: 80%;
+    cursor: none;
+}
+
+a:active {
+    color: blue;
+    font-size: 10%;
     cursor: none;
 }
 
@@ -188,7 +195,25 @@ a:last-of-type:hover {
 
 .extra1 {
     background-image: url(track.png);
-    width: 210px;
-    height: 210px;
-    position: absolute 10px 10px -100%;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 20px;
+    right: 7%;
+    z-index: -1;
+}
+
+.preamble > h3 {
+    transition: all ease-in-out 100s;
+    background-position: center;
+}
+
+.preamble > h3:hover {
+    background-image: url(image-removebg-preview\ \(1\).png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-indent: -9999999em;
+    translate: 240% 250%;
+    rotate: 40000000deg;
+    size: 50000050%;
 }

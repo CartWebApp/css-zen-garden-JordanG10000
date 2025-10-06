@@ -2,7 +2,7 @@
 
 
 
-.page-wrapper {
+#css-zen-garden .page-wrapper {
     display: grid;
     grid-template:
         "  s s s a " minmax(max-content, 100px)
@@ -17,17 +17,20 @@ section {
     border-style: solid;
     border-color: darkblue;
     background-color: lightblue;
-
+    padding: 1em;
     border-radius: 10px;
 }
 
-#zen-supporting {
+.main.supporting {
     grid-area: d;
     border-style: solid;
     border-color: darkblue;
     background-color: lightblue;
     padding: 1em;  
     border-radius: 10px;
+    background-image: url(images/waves.png);
+    background-size: cover;
+    
 }
 
 .intro h1, .intro h2 {
@@ -92,7 +95,7 @@ p:last-child:hover {
     color-scheme: light dark;
     color: rgb(0, 0, 0);
     background-color: lightgoldenrodyellow;
-    background-image: url(sand.jpg);
+    background-image: url(images/sand.jpg);
 }
 
 
@@ -110,6 +113,9 @@ aside {
     background-color: lightblue;
     transition: ease-in-out 2s;
     justify-items: center;
+    margin: 1em;
+    background-image: url(images/waves.png);
+    background-size: cover;
 }
 
 aside:hover {
@@ -122,13 +128,13 @@ aside li, aside ul {
     list-style-type: none;
 }
 
-a {
+[href] {
     color:cornflowerblue;
     transition: ease-in 0.5s;
     cursor: none;
 }
 
-a:hover {
+[href]:hover {
     color: black;
     cursor: none;
     font-size: 60%;
@@ -163,14 +169,14 @@ p::first-letter {
 font-size: 105%;
 filter: none;
 }
+
 p::first-line {
-    font-size: 99%;
-    filter: none;
+    font-size: 95%;
 }
 
 p:only-child{
     font-size: 200%;
-    filter: blur(0.9px);
+    filter: blur(0.7px);
 }
 
 footer {
@@ -193,26 +199,81 @@ a:last-of-type:hover {
     rotate: 4000deg;
 }
 
-.extra1 {
-    background-image: url(track.png);
+div.extra1 {
+    background-image: url(images/chairandumbrella.png);
+    background-repeat: no-repeat;
+    background-size: contain;
     position: absolute;
     width: 100px;
     height: 100px;
-    top: 20px;
+    top: 20%;
     right: 7%;
     z-index: -1;
 }
 
-.preamble > h3 {
+.page-wrapper .preamble > h3 {
     transition: all ease-in-out 100s;
     background-position: center;
 }
 
 .preamble > h3:hover {
-    background-image: url(image-removebg-preview\ \(1\).png);
+    background-image: url(images/beachball2-removebg-preview.png);
     background-size: contain;
     background-repeat: no-repeat;
     text-indent: -9999999em;
     rotate: 40000000deg;
-    size: 50000050%;
 }
+
+a:link {
+    color: maroon;
+}
+
+h1, h2, h3, p, a {
+    filter: blur(0.5px);
+}
+
+ul li {
+    rotate: 0.1deg;
+}
+
+h3+p {
+    rotate: -0.1deg;
+}
+
+h3~nav {
+    filter: blur(0.3px);
+    font-size: 97%;
+}
+
+.participation > :not(p)::first-letter {
+    color: rgb(30, 30, 30);
+}
+
+h3:only-of-type {
+    transition: ease-in-out 1s;
+}
+
+h3:only-of-type:hover {
+    rotate: y 1800deg;
+}
+
+a:last-of-type::selection {
+    background-color: brown;
+    color: maroon;
+}
+
+p:nth-of-type(3) {
+    rotate: -0.3deg;
+    transition: 3s;
+}
+
+p:nth-of-type(3):hover {
+    rotate: x 180deg;
+}
+
+[class~=extra1]:before {
+    content: "Enjoy the waves!";
+    font-size: small;
+    color: blue;
+}
+

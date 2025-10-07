@@ -254,7 +254,7 @@ h3:only-of-type {
 }
 
 h3:only-of-type:hover {
-    rotate: y 1800deg;
+    rotate: y 720deg;
 }
 
 a:last-of-type::selection {

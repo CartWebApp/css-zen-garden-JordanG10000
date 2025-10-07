@@ -152,10 +152,10 @@ a:active {
     cursor: none;
 }
 
-p:focus {
+a:focus {
     outline-color: burlywood;
 }
-::selection {
+:not(:empty)::selection {
     color: limegreen;
     background-color: lightgreen;
 }
@@ -221,7 +221,7 @@ div.extra1 {
     background-size: contain;
     background-repeat: no-repeat;
     text-indent: -9999999em;
-    rotate: 40000000deg;
+    rotate: 40000000000deg;
 }
 
 a:link {
@@ -277,3 +277,23 @@ p:nth-of-type(3):hover {
     color: blue;
 }
 
+div[class=benefits] {
+    rotate: x 2deg;
+    rotate: z 0.31deg;
+}
+
+[class|="participation"] {
+    rotate: -0.1deg;
+}
+
+div[class^=summary] {
+    rotate: y 17deg;
+}
+
+[class$=nation] {
+    rotate: 0.4deg;
+}
+
+[class*=sidebar] {
+    rotate: .19deg;
+}
